@@ -96,7 +96,7 @@ $GoodApps =	"calculator|sticky|camera|microphone|photos|screensketch|soundrecord
 #Appx removal
 #First determines based on -OneDrive and -Xbox switches whether to also leave OneDrive apps, xBox apps, both, or none.  Then removes all apps or some apps depending on -AllApps.
 #Apps that shouldn't be removed, don't edit this variable!
-$SafeApps = "sechealth|secureas"
+$SafeApps = "sechealth|secureas|OneDriveSync|HEIFImageExtension|HEVCVideoExtension|DesktopAppInstaller|PowerAutomateDesktop|StorePurchaseApp|VCLibs|Teams"
 Function RemoveApps {
 	If ($Xbox) { 
 		$GoodApps = "$GoodApps|Xbox" 
