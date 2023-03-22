@@ -509,7 +509,7 @@ Function ClearStartMenu {
         add-content $Env:TEMP\startlayout.xml $StartLayoutStr
         import-startlayout -layoutpath $Env:TEMP\startlayout.xml -mountpath $Env:SYSTEMDRIVE\
         remove-item $Env:TEMP\startlayout.xml
-}
+	}
 }
 
 
@@ -527,19 +527,19 @@ Function Goodbye {
 Write-Host "******Decrapifying Windows 10...******"
 If ($AppsOnly) {
     RemoveApps
-    ClearStartMenu
+   # ClearStartMenu
     Goodbye
 }Elseif ($SettingsOnly) {
     DisableTasks
     DisableServices
     RegChange
-    ClearStartMenu
+   # ClearStartMenu
     Goodbye
 }Else {
 	RemoveApps
     DisableTasks
     DisableServices
     RegChange
-    ClearStartMenu
+  #  ClearStartMenu
     Goodbye
 }
